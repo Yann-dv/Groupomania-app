@@ -54,7 +54,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  base: 'Groupomania-app',
+  base: '/Groupomania-app/',
   history: createWebHistory(),
   routes,
 });
