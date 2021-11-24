@@ -11,42 +11,42 @@ const BoardUser = () => import("./components/BoardUser.vue")
 
 const routes = [
   {
-    path: "/",
+    path: "/Groupomania-app/",
     name: "home",
     component: Home
   },
   {
-    path: "/home",
+    path: "/Groupomania-app/home",
     component: Home
   },
   {
-    path: "/login",
+    path: "/Groupomania-app/login",
     component: Login,
   },
   {
-    path: "/register",
+    path: "/Groupomania-app/register",
     component: Register,
   },
   {
-    path: "/profile",
+    path: "/Groupomania-app/profile",
     name: "profile",
     // lazy-loaded
     component: Profile,
   },
   {
-    path: "/admin",
+    path: "/Groupomania-app/admin",
     name: "admin",
     // lazy-loaded
     component: BoardAdmin,
   },
   {
-    path: "/mod",
+    path: "/Groupomania-app/mod",
     name: "moderator",
     // lazy-loaded
     component: BoardModerator,
   },
   {
-    path: "/forum",
+    path: "/Groupomania-app/forum",
     name: "forum",
     // lazy-loaded
     component: BoardUser,
@@ -59,7 +59,7 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-    const publicPages = ['/login', '/register', '/home', '/'];
+    const publicPages = ['/Groupomania-app/login', '/Groupomania-app/register', '/Groupomania-app/home', '/Groupomania-app/'];
     const authRequired = !publicPages.includes(to.path);
     const loggedIn = localStorage.getItem('user');
   
@@ -67,7 +67,7 @@ router.beforeEach((to, from, next) => {
     // redirect to login page
     if (authRequired && !loggedIn) {
       TokenService.removeUser();
-      next('/home');
+      next('/Groupomania-app/home');
     }
      else {
       TokenService.getLocalRefreshToken();
