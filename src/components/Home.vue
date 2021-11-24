@@ -6,10 +6,10 @@
     </header>
       <div class="text-center">
         <ul class="list-group">
-          <li class="list-group-item"><router-link to="/login">
+          <li class="list-group-item"><router-link to="/Groupomania-app/login">
             <button class="btn btn-primary btn-block fs-3 btn-lg mt-5 connection mt-2">Connexion</button>
           </router-link></li>
-          <li class="list-group-item"><router-link to="/register">
+          <li class="list-group-item"><router-link to="/Groupomania-app/register">
             <button class="btn btn-secondary btn-block fs-3 mt-5 btn-lg connection mt-2">Inscription</button>
           </router-link></li>
           </ul>
@@ -55,7 +55,7 @@ export default {
       }
     );
   } else if (activeUser) {
-      this.$router.push("/forum");
+      this.$router.push("/Groupomania-app/forum");
   }
   }
 };

@@ -67,7 +67,7 @@ export default {
   },
   created() {
     if (this.loggedIn) {
-      this.$router.push("/forum");
+      this.$router.push("/Groupomania-app/forum");
     }
   },
   methods: {
@@ -76,7 +76,7 @@ export default {
 
       this.$store.dispatch("auth/login", user).then(
         () => {
-          this.$router.push("/forum");
+          this.$router.push("/Groupomania-app/forum");
         },
         (error) => {
           this.loading = false;

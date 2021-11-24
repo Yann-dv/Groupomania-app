@@ -160,7 +160,7 @@ export default {
   },
   mounted() {
     if (!this.currentUser) {
-      this.$router.push("/home");
+      this.$router.push("/Groupomania-app/home");
     }
     if (localStorage.getItem("modifyingPost")) {
       try {
@@ -188,7 +188,7 @@ export default {
 methods: {
     logOut() {
       this.$store.dispatch("auth/logout");
-      this.$router.push("/home");
+      this.$router.push("/Groupomania-app/home");
     },
     handlePost() {
       if (this.content) {

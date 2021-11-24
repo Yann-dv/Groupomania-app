@@ -1,6 +1,6 @@
 <template>
   <div class="footer container-fluid footer-background py-2 mt-3 mb-2">
-    <router-link to="/login">
+    <router-link to="/Groupomania-app/login">
       <h3 class="text-center fs-4">À propos</h3>
     </router-link>
     <ul class="text-center mb-1">

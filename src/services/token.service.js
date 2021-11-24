@@ -25,7 +25,7 @@ class TokenService {
   
     removeUser() {
       localStorage.removeItem("user")
-        window.location = "/home";
+        window.location = "/Groupomania-app/home";
     }
   }
   

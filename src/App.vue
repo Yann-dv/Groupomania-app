@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <nav class="navbar navbar-expand-lg navbar-dark">
-      <router-link to="/home" class="nav-link fs-4" v-if="!currentUser">
+      <router-link to="/Groupomania-app/home" class="nav-link fs-4" v-if="!currentUser">
       <img src="./assets/banner_logo_w.png" alt="Logo Groupomania" class="px-2">
       </router-link>
       <router-link to="/forum" class="nav-link fs-4" v-if="currentUser">
@@ -10,29 +10,29 @@
       
       <div class="navbar-nav me-auto">
         <li class="nav-item" v-if="!this.$store.state.auth.status.loggedIn">
-          <router-link to="/home" class="nav-link fs-4">
+          <router-link to="/Groupomania-app/home" class="nav-link fs-4">
             <font-awesome-icon icon="home" />Accueil
           </router-link>
         </li>
         <li v-if="showAdminBoard" class="nav-item">
-          <router-link to="/forum" class="nav-link fs-4">Administrateur - Forum</router-link>
+          <router-link to="/Groupomania-app/forum" class="nav-link fs-4">Administrateur - Forum</router-link>
         </li>
         <li v-if="showModeratorBoard" class="nav-item">
-          <router-link to="/forum" class="nav-link fs-4">Moderateur- Forum</router-link>
+          <router-link to="/Groupomania-app/forum" class="nav-link fs-4">Moderateur- Forum</router-link>
         </li>
         <li class="nav-item" v-if="!showModeratorBoard">
-          <router-link v-if="currentUser" to="/forum" class="nav-link fs-4 ps-1">Forum de discussion</router-link>
+          <router-link v-if="currentUser" to="/Groupomania-app/forum" class="nav-link fs-4 ps-1">Forum de discussion</router-link>
         </li>
       </div>
 
       <div v-if="!currentUser" class="navbar-nav ms-auto">
         <li class="nav-item">
-          <router-link to="/register" class="nav-link fs-4">
+          <router-link to="/Groupomania-app/register" class="nav-link fs-4">
             <font-awesome-icon icon="user-plus" /> Inscription
           </router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/login" class="nav-link fs-4">
+          <router-link to="/Groupomania-app/login" class="nav-link fs-4">
             <font-awesome-icon icon="sign-in-alt" /> Connection
           </router-link>
         </li>
@@ -40,7 +40,7 @@
 
       <div v-if="currentUser" class="navbar-nav ms-auto">
         <li class="nav-item">
-          <router-link to="/profile" class="nav-link fs-4">
+          <router-link to="/Groupomania-app/profile" class="nav-link fs-4">
             <font-awesome-icon icon="user"/>
 
             {{ currentUser.username }}
@@ -94,7 +94,7 @@ export default {
   methods: {
     logOut() {
       this.$store.dispatch('auth/logout');
-      this.$router.push('/home');
+      this.$router.push('/Groupomania-app/home');
     }
   },
   mounted() {
